@@ -1,0 +1,150 @@
+.gallery {
+    padding: 80px 0 200px;
+
+
+    @include mediaTablet {
+        padding-bottom: 300px;
+    }
+
+    @include mediaTablet-sm {
+        padding-bottom: 330px;
+    }
+
+    @include mediaPhone-bg {
+        padding-bottom: 450px;
+    }
+}
+
+.gallery-subtitle {
+    text-align: center;
+
+    
+    @include mediaPhone-bg {
+        text-align: left;
+        font-size: 16px;
+    }
+}
+
+.gallery__title {
+    margin-top: 8px;
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 120%;
+    text-align: center;
+
+    @include mediaPhone-bg {
+        text-align: left;
+        font-size: 24px;
+    }
+}
+
+.gallery-hidden {
+    display: none;
+    margin-top: 32px;
+
+    @include mediaTablet-sm {
+        display: block;
+    }
+}
+
+.gallery-wrapper {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+
+    @include mediaTablet-sm {
+        display: none;
+    }
+}
+
+.gallery__item {
+    position: relative;
+    cursor: pointer;
+    transition: filter 1s ease;
+
+    @include mediaTablet-sm {
+        pointer-events: none;
+    }
+
+    &:hover {
+        filter: brightness(80%);
+    }
+
+
+    &:hover::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 18px;
+        height: 18px;
+        transform: translate(-50%, -50%);
+        background: url('zoom.svg');
+    }
+
+    &:nth-child(1) {
+        grid-column-start: 1;
+        grid-column-end: 7;
+       
+    }
+
+    &:nth-child(2) {
+        grid-column-start: 7;
+        grid-column-end: 10;
+    }
+
+    &:nth-child(3) {
+        grid-column-start: 10;
+        grid-column-end: 13;
+    }
+
+    &:nth-child(4) {
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+
+    &:nth-child(5) {
+        grid-column-start: 4;
+        grid-column-end: 10;
+    }
+
+    &:nth-child(6) {
+        grid-column-start: 10;
+        grid-column-end: 13;
+    }
+}
+
+.gallery__btn {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.gallery__btn button {
+    padding: 16px 36px;
+    border: 1px solid $btn-bg;
+}
+
+.gallery__popup {
+    position: fixed;
+    top: 0;
+    left:0;
+    right:0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background: rgba(38, 71, 71, 0.95);
+   
+    z-index: 10;
+}
+
+.gallery__popup span {
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    font-size: 70px;
+    font-weight: bolder;
+    cursor: pointer;
+    color: $white;
+}

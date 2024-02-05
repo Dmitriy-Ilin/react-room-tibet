@@ -1,0 +1,30 @@
+@mixin mediaDesctop() {
+    @media screen and (max-width: $desctop) {
+        @content;
+    }
+}
+
+@mixin mediaTablet() {
+    @media screen and (max-width: $tablet) {
+        @content;
+    }
+}
+
+@mixin mediaTablet-sm() {
+    @media screen and (max-width: $tablet-sm) {
+        @content;
+    }
+}
+
+@mixin mediaPhone-bg() {
+    @media screen and (max-width: $phone-bg) {
+        @content;
+    }
+}
+
+@mixin mediaPhone() {
+    @media screen and (max-width: $phone) {
+        @content;
+    }
+}
+

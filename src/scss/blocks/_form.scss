@@ -1,0 +1,180 @@
+.header-form {
+    padding: 40px 43px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 210px;
+    column-gap: 24px;
+    row-gap: 20px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.20);
+    backdrop-filter: blur(3px);
+
+    @include mediaTablet {
+        grid-template-columns: repeat(11, 1fr) 210px;
+
+        .form-element:nth-child(1) {
+            grid-column-start: 1;
+            grid-column-end: 9;
+        }
+
+        .form-element:nth-child(2) {
+            grid-column-start: 9;
+            grid-column-end: 13;
+        }
+
+        .form-element:nth-child(3) {
+            grid-column-start: 1;
+            grid-column-end: 12;
+        }
+
+        .form-btn {
+            grid-column-start: 12;
+            grid-column-end: 13;
+        }
+    }
+
+    @include mediaTablet-sm {
+        .form-element:nth-child(1) {
+            grid-column-start: 1;
+            grid-column-end: 13;
+        }
+
+        .form-element:nth-child(2) {
+            grid-column-start: 1;
+            grid-column-end: 13;
+        }
+    }
+
+    @include mediaPhone-bg {
+        display: none;
+    }
+}
+
+.mobile-form-btn {
+    display: none;
+    padding: 16px 32px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 0.192px;
+    color: $btn-bg;
+    background-color: $light;
+
+    &:hover {
+        color: $light;
+        background-color: $btn-bg;
+    }
+
+    @include mediaPhone-bg() {
+        display: block;
+    }
+}
+
+.form-element {
+    font-size: 16px;
+    line-height: 150%;
+}
+
+.form-element select {
+    -moz-animation: none;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    padding: 16px 32px 16px 16px;
+    outline: none;
+}
+
+.select-wrapper {
+    position: relative;
+
+    &::before {
+        position: absolute;
+        content: '';
+        top: 50%;
+        right: 16px;
+        transform: translateY(-50%);
+        display: block;
+        width: 20px;
+        height: 20px;
+        background: url('ep_arrow-down.svg');
+        pointer-events: none;
+    }
+}
+
+.form-element select,
+.form-element input {
+    border-radius: 8px;
+    border: 1px solid #E1E3E4;
+    color: $light;
+    cursor: pointer;
+}
+
+
+option {
+    font-size: 16px;
+    line-height: 150%;
+    color: $btn-bg;
+    background-color: $light;
+
+    &:hover {
+        color: $light;
+        background-color: $btn-bg;
+
+    }
+}
+
+.form-element input {
+    padding: 16px 16px;
+}
+
+.form-element:nth-child(2) input {
+    width: 50%;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    background: url('formkit_date.svg') no-repeat;
+    width: 16px;
+    height: 16px;
+    transform: translate(50%, 8%);
+}
+
+.form-element input:first-child {
+    border-radius: 8px 0 0 8px;
+    border-right: none;
+
+    ::-webkit-calendar-picker-indicator {
+        background-color: $light;
+    }
+}
+
+.form-element input:nth-child(2) {
+    border-radius: 0 8px 8px 0;
+    border-left: none;
+}
+
+.form-element p {
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 150%
+}
+
+.form-btn button {
+    padding: 16px 32px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 0.192px;
+    color: $btn-bg;
+    background-color: $light;
+
+    &:hover {
+        color: $light;
+        background-color: $btn-bg;
+    }
+}
+

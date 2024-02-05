@@ -1,0 +1,56 @@
+.mobile-nav-wrapper {
+    display: none;
+    position: absolute;
+    background-color: $btn-bg;
+    min-width: 100vw;
+    min-height: 100vh;
+    display: none;
+    flex-direction: column;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    overflow: hidden;
+    padding: 45px 16px;
+
+    &--active {
+        display: flex;
+    }
+}
+
+.mobile-nav__btn {
+    margin-left: auto;
+
+    &:hover  {
+        color: transparent;
+        background-color: transparent;
+    }
+}
+
+.mobile-nav {
+    margin-top: 10px; 
+    display: flex; 
+    flex-direction: column;
+    row-gap: 16px;
+}
+
+.mobile-nav__item {
+    display: flex;
+
+    gap: 10px;
+
+    &:hover {
+        fill: $accent;
+        stroke: $accent;
+    }
+
+    @include mediaPhone-bg {
+        font-size: 12px;
+        gap: 6px;
+    }
+}
+
+.mobile-nav__link {
+ 
+}

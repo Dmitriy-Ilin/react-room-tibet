@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+body {
+    font-family: $font-main;
+    background-color: $white;
+    color: $dark;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.main-div {
+    position: relative;
+
+    &--active {
+        max-height: 100vh;
+        overflow: hidden;
+    }
+}
+
+.container {
+    max-width: 1200px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+.subtitle {
+    color: $accent;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 20px; 
+}
+
+.active {
+    display: flex;
+}
+
+.hidden {
+    display: none;
+}
+
+a {
+    color: $light;
+    cursor: pointer;
+
+    transition: all 0.2s ease-in;
+
+    &:hover {
+        color: $accent;
+    }
+}
+
+button {
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    color: $light;
+    background-color: $btn-bg;
+    border-radius: 4px;
+   
+    transition: background-color 0.2s ease-in;
+
+    &:hover {
+        color: $btn-bg;
+        background-color: $light;
+    }
+
+    
+    @include mediaPhone-bg {
+        font-size: 16px;
+    }
+}
+
+// a {
+//     color: $white;
+//     transition: color 0.2s ease-in;
+
+//     &:hover {
+//         color: $accent;
+//     }
+// }
+
+// .container {
+//     max-width: 1130px;
+//     padding: 0 10px;
+//     margin: 0 auto;
+
+//     &--sm {
+//         max-width: 840px;
+//     }
+// }
+
+// .text-right {
+//     text-align: right;
+// }
+
+// .visually-hidden {
+//     height: 1px;
+//     overflow: hidden;
+//     width: 1px;
+//     position: absolute;
+//     clip: rect(1px 1px 1px 1px);
+//     clip: rect(1px, 1px, 1px, 1px);
+//     clip-path: inset(50%);
+//     white-space: nowrap;
+// }
+
+// .none {
+//     display: none !important; 
+// }
+
+// .title-2 {
+//     color: $accent;
+//     font-family: $font-accent;
+//     font-size: 36px;
+//     font-weight: 700;
+
+//     @mixin mediaTablet() {
+//         font-size: 28px;
+//     }
+// }
+
+// .link-bold {
+//     color: $accent;
+//     font-weight: 700;
+// }
+
+// .no-scroll {
+//     overflow-y: hidden;
+// }

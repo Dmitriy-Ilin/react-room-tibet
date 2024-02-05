@@ -1,0 +1,150 @@
+.programms {
+    padding: 80px 0 100px;
+    background-color: $bg-light;
+}
+
+.programms-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 90px;
+
+    @include mediaTablet {
+        gap: clamp(0rem, -2.762rem + 11.18vw, 5.625rem);
+    }
+}
+
+.programms__left {
+    max-width: 580px;
+
+    @include mediaTablet {
+        max-width: 100%;
+    }
+}
+
+.programms__right {
+
+}
+
+.programms__title {
+    margin-top: 8px;
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 120%;
+
+    @include mediaPhone-bg {
+        font-size: 24px;
+    }
+}
+
+.programms__text {
+    margin-top: 40px;
+    font-weight: 400;
+    line-height: 150%;
+
+    @include mediaPhone-bg {
+        font-size: 16px;
+    }
+}
+
+.programms__blocks {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+}
+
+.programms__item {
+    display: flex;
+    align-items: center;
+    column-gap: 23px;
+}
+
+.programms__item img {
+    max-width: 36px;
+    max-height: 36px;
+}
+
+.programms__item-title {
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 0.216px;
+}
+
+.programms__item-text {
+    margin-top: 4px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #000;
+}
+
+.programms__btn {
+    margin-top: 40px;
+
+    @include mediaPhone-bg {
+        text-align: center;
+    }
+}
+
+.programms__btn button {
+    padding: 16px 36px;
+    border: 1px solid $btn-bg;
+}
+
+.programms__right-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+
+    @include mediaTablet {
+        grid-template-columns: 1fr;
+        margin: 0 auto;
+    }
+
+    @include mediaPhone-bg {
+        display: none;
+    }
+}
+
+.programms__right-img {
+
+    &:nth-child(1) {
+        border-radius: 0 50px 0 50px;
+    }
+
+    &:nth-child(2) {
+        border-radius: 50px 0 50px 0;
+    }
+
+    &:nth-child(3) {
+        border-radius: 50px 0 50px 0;
+    }
+
+    &:nth-child(4) {
+        border-radius: 0 50px 0 50px;
+    }
+
+    @include mediaTablet {
+        grid-template-columns: 1fr;
+        max-width: 150px;
+        max-height: 150px;
+    }
+}
+
+
+
+// .programms-wrapper {
+//     display: grid;
+//     grid-template-columns: repeat(12, 1fr);
+//     gap: 5px;
+// }
+
+// .programms__left {
+//     grid-column-start: 1;
+//     grid-column-end: 7;
+// }
+
+// .programms__right {
+//     grid-column-start: 8;
+//     grid-column-end: 13;
+// }

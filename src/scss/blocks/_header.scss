@@ -1,0 +1,83 @@
+.header {
+    padding: 16px 0 82px;
+    color: $light;
+    background: url('background.jpg') 50% / cover no-repeat;
+
+    @include mediaTablet-sm() {
+       
+    }
+}
+
+
+
+.header__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__nav {
+
+
+    @include mediaDesctop() {
+        display: none;
+    }
+
+}
+
+.header__nav-btn {
+
+
+    @include mediaDesctop() {
+        display: none;
+    }
+}
+
+.nav-btn {
+    margin-left: clamp(16px, 0.587rem + 2.06vw, 49px);
+    padding: 12px 24px; 
+    background-color: $btn-bg;
+    border-radius: 4px;
+}
+
+.header__title {
+    max-width: 1080px;
+    margin-top: clamp(60px, -1.288rem + 25.19vw, 465px);
+    font-family: $font-title;
+    font-size: clamp(1.25rem, 0.568rem + 3.41vw, 3.125rem);
+    font-weight: 700;
+    line-height: 150%; 
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    br {
+        display: none;
+    }
+}
+
+.header__footer {
+    margin-top: 41px;
+}
+
+.header__burger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    background-color: transparent;
+    gap: 8px;
+
+    &:hover {
+        background-color: transparent;
+    }
+
+    @include mediaDesctop() {
+        display: flex;
+    }
+}
+
+.header__burger-img {
+    width: 21px;
+    height: 3px;
+    background-color: $white;  
+    transition: all 1s ease;
+}

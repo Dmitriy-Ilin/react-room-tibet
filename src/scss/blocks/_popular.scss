@@ -1,0 +1,39 @@
+.popular {
+    padding: 80px 0 100px;
+}
+
+.popular__subtitle {
+    text-align: center;
+
+    @include mediaPhone-bg {
+        text-align: left;
+        font-size: 16px;
+    }
+}
+
+.popular__title {
+    margin-top: 8px;
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 120%; 
+    text-align: center;
+
+    @include mediaPhone-bg {
+        text-align: left;
+        font-size: 24px;
+    }
+}
+
+.popular__slider {
+    margin-top: 50px;
+}
+
+.popular__btn {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.popular__btn button {
+    padding: 16px 36px;
+}
+
