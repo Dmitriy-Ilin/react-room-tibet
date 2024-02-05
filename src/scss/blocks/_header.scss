@@ -1,7 +1,7 @@
 .header {
     padding: 16px 0 82px;
     color: $light;
-    background: url('background.jpg') 50% / cover no-repeat;
+    background: url('./background.jpg') 50% / cover no-repeat;
 
     @include mediaTablet-sm() {
        
